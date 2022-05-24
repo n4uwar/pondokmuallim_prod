@@ -1,0 +1,7 @@
+{
+  "name": "Pondok Mualim",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
