@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScreensizeService } from '../services/screensize.service';
 
 @Component({
   selector: 'app-tabs',
@@ -6,7 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
+  isDesktop: boolean;
 
-  constructor() {}
+constructor(private screensizeService:ScreensizeService) {
+  this.screensizeService.isDesktopView().subscribe(isDesktop => {
+    console.log('Is desktop changed:',isDesktop);
+    if(this.isDesktop && !isDesktop){
+      window.location.reload();
+    }
+    this.isDesktop = isDesktop;
+  
+  });
+  }
+    
 
 }
