@@ -20,5 +20,8 @@ constructor(private screensizeService:ScreensizeService) {
   });
   }
     
-
+  ionViewDidEnter() {
+    document.querySelector('#tab-button-tab3').shadowRoot.querySelector('.button-native').setAttribute('style', 'margin-top: -2px');
+  }
+  
 }

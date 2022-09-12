@@ -35,19 +35,37 @@ const routes: Routes = [
       }
       ]
         
+      },
+      {
+         path: 'noti',
+         children: [
+           {
+             path: '',
+             loadChildren: () => import('../noti/noti.module').then(m => m.NotiPageModule)
+       }
+       ]
+     },,
+     {
+        path: 'user',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../user/user.module').then(m => m.UserPageModule)
       }
-      // {
-      //   path: '',
-      //   redirectTo: '/tabs/tab1',
-      //   pathMatch: 'full'
-      // }
+      ]
+    },
+       {
+         path: '',
+         redirectTo: '/tabs',
+        pathMatch: 'full'
+      }
     ]
-  }
-  // {
-  //   path: '',
-  //   redirectTo: '/tabs/tab1',
-  //   pathMatch: 'full'
-  // }
+  },
+   {
+    path: '',
+     redirectTo: '/tabs',
+    pathMatch: 'full'
+   }
 ];
 
 @NgModule({

@@ -18,7 +18,7 @@
 
     .footer{
         width:100%;
-        color:rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
         font-weight:bold;
         background:#e7d80a;
         height:56px;
@@ -28,3 +28,156 @@
         bottom:0px;
        }
     }
+
+    ion-tabs{
+     background: #ffffff;
+ }
+ 
+ ion-tab-bar  {
+     background: #ffffff;
+     width: 92% !important;
+     max-width: 400px !important;
+     border-radius: 30px;
+     margin: 5px 0px 5px 5% !important;
+     max-height: 56px;
+     height: 95px;
+     max-height: 95px;
+     border: unset;
+ }
+ 
+ .tab-selected ion-icon{
+     color: rgb(66, 66, 63);
+     padding-bottom: 9px;
+ }
+ 
+ .tab-selected, ion-tab-button{
+     background: #020202;
+ }
+ 
+ #tab-button-tab1,
+ #tab-button-tab2,
+ #tab-button-tab3,
+ #tab-button-noti,
+ #tab-button-user {
+     background: #61615f;
+     -webkit-box-shadow: 5px 5px 15px -15px  rgba(0,0,0,0.4);
+     -moz-box-shadow: 5px 5px 15px -15px  rgba(0,0,0,0.4);
+     box-shadow: 5px 5px 15px -15px  rgba(0,0,0,0.4);
+     --border: none;
+     max-height: 56px;
+     margin-top: 39px;
+ }
+ 
+ ion-tab-button:hover {
+     ion-icon, ion-label {
+         color: rgb(255, 255, 255) !important;
+         --ion-color-base: white !important;
+     }
+ }
+ 
+ ion-tabs {
+     //not selected custom image
+     ion-tab-button.custom-profile > ion-icon {
+         background-image: url(https://blog.photofeeler.com/wp-content/uploads/2017/09/instagram-profile-picture-maker.jpg);
+     }
+ 
+     //selected custom image
+     ion-tab-button.tab-selected.custom-profile > ion-icon {
+         background-image: url(https://blog.photofeeler.com/wp-content/uploads/2017/09/instagram-profile-picture-maker.jpg);
+     }
+ }
+ 
+ #tab-button-tab1 {
+     border-top-left-radius: 30px;
+     border-bottom-left-radius: 30px;
+ }
+ 
+ #tab-button-tab2 {
+   border-top-right-radius: 15px;
+ }
+ 
+ #tab-button-noti {
+   border-top-left-radius: 15px;
+ }
+ 
+ #tab-button-tab3 {
+     overflow: visible !important;
+     max-height: 120px !important;
+     height: 120px !important;
+     border-top-left-radius: 20px;
+     border-top-right-radius: 20px;
+ 
+     ion-icon {
+         transform: translate3d(0, 0px, 0);
+         background: yellow;
+         padding: 10px !important;
+         border-radius: 50% !important;
+         width: 40px !important;
+         height: 40px !important;
+         margin-top: -60px !important;
+         box-shadow: 0 0 0 15px #fbfbfb;
+         border: unset;
+     }
+ }
+ 
+ #tab-button-tab3::part(a) {
+     --margin-top: -2px !important;
+ }
+ #tab-button-tab3 > a {
+     --margin-top: -2px !important;
+ }
+ 
+ #tab-button-user {
+     border-top-right-radius: 30px;
+     border-bottom-right-radius: 30px;
+ 
+     ion-icon {
+         background-repeat:no-repeat;
+         background-position:center;
+         height:24px;
+         width:24px;
+         background-size:contain;
+         border-radius: 50%;
+         -webkit-background-size: contain;
+         -moz-background-size: contain;
+         -o-background-size: contain;
+         &:before {
+             display:none;
+         }
+     }
+ }
+ 
+ #tab-button-user.tab-selected ion-icon{
+     padding-bottom: 0px;
+ }
+ 
+ ion-badge {
+     --background: rgb(60, 61, 4);
+     --color: white;
+     width: 23px;
+     height: 21px;
+     font-size: 0.8rem;
+     margin-top: -8px;
+     padding-top: 5px;
+ }
+ 
+ #tab-button-tab1 > ion-icon:after,
+ #tab-button-tab2 > ion-icon:after,
+ #tab-button-noti > ion-icon:after {
+     background: none repeat scroll 0 0 transparent;
+     bottom: 0;
+     content: "";
+     display: block;
+     height: 7px;
+     position: absolute;
+     transition: width 0.4s ease 0s, background-color .4s ease;
+     width: 0;
+     border-radius: 5px;
+ }
+ 
+ #tab-button-tab1.tab-selected > ion-icon:after,
+ #tab-button-tab2.tab-selected > ion-icon:after,
+ #tab-button-noti.tab-selected > ion-icon:after {
+     width: 24px;
+     background: yellow;
+ }
